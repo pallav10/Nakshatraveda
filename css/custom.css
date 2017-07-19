@@ -1135,3 +1135,26 @@ border-bottom-left-radius: 10px;
   color: #494949;
   background-color: #ffffff;
 }
+
+
+/*CART ITEMS*/
+.cartItem{
+    border: 1px solid #757575;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+@media (min-width:998px){
+     .cartItem{
+        display: flex;
+        align-items: center;
+    }
+        
+}
+
+@media (max-width:998px){
+    .nameCarrier{
+        display: flex;
+        justify-content: center;
+    }
+}
