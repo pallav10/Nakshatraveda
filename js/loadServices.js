@@ -28,7 +28,7 @@ $(document).ready(function() {
 				$("#load-services").append(`<a data-service="`+data[i].id+`" href="shop.html" class="main">
 																			<div class="col-md-4 col-sm-12 col-xs-12 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.1s">
 							                        <div class="col-md-12">
-							                            <img id="service-image" src="`+data[i].image+`" alt="image-missing" class="pujaImage img-responsive img-rounded">
+							                            <img id="service-image" src="../images/service_categories/`+data[i].id+`.png" alt="image-missing" class="pujaImage img-responsive img-rounded">
 							                        </div>
 							                        			<div class="col-md-12">    
 							                                <div class="sign_card text-center signs_bg">

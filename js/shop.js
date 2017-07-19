@@ -33,7 +33,7 @@ $(document).ready(function() {
 																				 <h3>`+data[i].name+`</h3>
 																				 <div class='row'>
 																				 	<div class='col-md-6 col-sm-12 col-xs-12'>
-																				 		<img src=`+data[i].image+`>
+																				 		<img src="../images/items/`+data[i].id+`.png">
 																				 	</div>
 																				 	<div class='col-md-6 col-sm-12 col-xs-12'>
 																				 		<p>`+data[i].description+`</p>
@@ -92,7 +92,7 @@ $(document).ready(function() {
 																				 <h3>`+data[i].name+`</h3>
 																				 <div class='row'>
 																				 	<div class='col-md-6 col-xs-12'>
-																				 		<img src=`+data[i].image+`>
+																				 		<img src="../images/items/`+data[i].id+`.png">
 																				 	</div>
 																				 	<div class='col-md-6 col-xs-12'>
 																				 		<p>`+data[i].description+`</p>
@@ -137,7 +137,7 @@ $(document).ready(function() {
 																		   <h3>`+data[i].name+`</h3>
 																		   <div class='row'>
 																		     <div class='col-md-6 col-xs-12'>
-																		     	<img src=`+data[i].image+`>
+																		     	<img src="../images/items/`+data[i].id+`.png">
 																		     </div>
 																		     <div class='col-md-6 col-xs-12'>
 																		     	<p>`+data[i].description+`</p>
@@ -209,7 +209,7 @@ $(document).ready(function() {
 																				   <h3>`+data[i].name+`</h3>
 																				   <div class='row'>
 																				     <div class='col-md-6 col-xs-12'>
-																				     	<img src=`+data[i].image+`>
+																				     	<img src="../images/items/`+data[i].id+`.png">
 																				     </div>
 																				     <div class='col-md-6 col-xs-12'>
 																				     	<p>`+data[i].description+`</p>
