@@ -109,7 +109,7 @@ $(document).ready(function() {
 			    	for (var i = 0; i < data.length; i++) {
 				    	$("#services-ordered").append(`<div class="row cartItem">
 																		            <div class="col-md-6 col-sm-12 col-xs-12 nameCarrier">
-																		                <p id="item-name" class="cart-elements"></p>
+																		                <p id="item-name" class="cart-elements">`+data[i].name+`</p>
 																		            </div>
 																		            <div class="col-md-2 col-sm-12 col-xs-12">
 																		                <div class="input-sm input-group">

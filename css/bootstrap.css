@@ -5844,8 +5844,8 @@ button.close {
 
 .btn-primary:hover, .btn-default:hover {
   color: #fff;
-  background-color: #4b3065;
-  border-color: #4b3065; }
+  background-color: #f3b512;
+  border-color: #f3b512; }
 
 .btn-default:focus {
   outline: none;
@@ -5950,7 +5950,7 @@ textarea {
   color: #4b3065 !important; }
 
 .dropdown-menu > li > a:hover {
-  background-color: #4b3065;
+  background-color: #f3b512;
   color: #fff !important; }
 
 .nav > li > a:focus {

@@ -150,8 +150,8 @@
                                 <div class="text-center info1 font13 ">
                                         <a data-toggle="dropdown" href="index.html" class="text-info dropdown-toggle" aria-expanded="true">Gallery<span class="caret"></span></a>
                                         <ul class="dropdown-menu dropdown_mod animated fadeInUp" data-dropdown-in="fadeInUp" data-dropdown-out="fadeOut">
-                                            <li><a href="photo_gallery.html">Photo Gallery</a></li>
-                                            <li><a href="video_gallery.html">Video Gallery</a></li>
+                                            <li><a class="bHoverYellow" href="photo_gallery.html">Photo Gallery</a></li>
+                                            <li><a class="bHoverYellow" href="video_gallery.html">Video Gallery</a></li>
 
                                         </ul>
                                 </div>
@@ -572,17 +572,15 @@
         </div>
     </div>
 </section>
+
+<!--
 <section class="bg-info">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 home_margin">
                 <h2 class="text-white font35">Child Naming:</h2>
                 <div class="row">
-                    <!-- <div class="col-md-4 col-sm-3 elements_desc">
-                        <label class="text-white font18" for="name">I have a:</label>
-                        <input type="text" id="name" class="bg-white form-control"
-                               placeholder="Son/Daughter">
-                    </div> -->
+                    </div> 
                     <div class="col-md-2 home_dob col-sm-3 elements_desc">
                         <label class="text-white font18">I have a:</label>
                         <select class="home_select form-control bg-white">
@@ -619,7 +617,7 @@
                         </select>
                     </div>
                     <div class="col-md-2 col-sm-2 home_dob elements_desc home_date">
-                        <!--<label></label>-->
+                        
                         <select class="home_select1 form-control bg-white">
                             <option value="">Choose</option>
                             <option>1</option>
@@ -656,7 +654,7 @@
                         </select>
                     </div>
                     <div class="col-md-2 col-sm-2 home_dob elements_desc home_date">
-                        <!--<label></label>-->
+                        
                         <select class="home_select2 form-control bg-white">
                             <option value="">Choose</option>
                             <option>1990</option>
@@ -687,20 +685,23 @@
         </div>
     </div>
 </section>
+-->
 
 <section class="form-background">
 		<div class="container">
 		    <div class="row container-style">
-		        <form>
-		        		<h3>Ask a Question</h3>
+		        <form action="send.php" method="POST">
+		        		<h3 class="font30 text-center">Ask a Question</h3>
 		            <div class="form-group">
 		                <label>Enter Name</label>
-		                <input class="form-control form-input-styles" id="guestName" type="text" required>
+		                <input class="form-control form-input-styles" id="guestName" name="name" type="text" required>
 		                <label>Enter Email</label>
-		                <input class="form-control form-input-styles" id="guestEmail" type="email" required>
+		                <input class="form-control form-input-styles" id="guestEmail" name="email" type="email" required>
+		                <label>Enter Subject</label>
+		                <input class="form-control form-input-styles" id="guestSubject" name="subject" type="text">
 		                <label>Message</label>
-		                <textarea class="form-control form-input-styles" id="guestMessage" rows="4"></textarea>
-		                <button class="btn btn-default submit-form-button" id="submitContactForm" type="submit">SUBMIT</button>
+		                <textarea class="form-control form-input-styles" id="guestMessage" name="message" rows="4"></textarea>
+		                <button class="btn btn-default submit-form-button bHoverYellow" id="submitContactForm" name="submit" type="submit">SUBMIT</button>
 		            </div>
 		        </form>
 		    </div>

@@ -327,6 +327,14 @@ label {
 .button1, .button2{
     float: right;
     margin:0 10px;
+/*    background-color: #f3b512;*/
+/*    border-color: #f3b512;*/
+}
+
+.button1:hover, .button2:hover{
+    background-color: #f3b512;
+    border-color: #f3b512;
+    
 }
 
 .footer_bg .row .col-md-4{
@@ -715,7 +723,7 @@ border-bottom-left-radius: 10px;
   font-size: 11px; }
 
 .signs_bg:hover {
-  background-color: #4b3065;
+  background-color:#f3b512;
   border-radius: 5px 5px 10px 10px; }
 
 .signs_bg:hover .signs_clr {
@@ -1136,6 +1144,37 @@ border-bottom-left-radius: 10px;
   background-color: #ffffff;
 }
 
+
+
+/*MISCELLANEOUS*/
+.bg-info {
+  background-color: #f3b512; }
+
+.bg-info .btn_adjust a{
+    background-color: #fff;
+}
+
+.btn_align{
+    border-color: white;
+    color: #f3b512;
+}
+
+.yellowF{
+    color: #f3b512 !important;
+}
+
+.yellowB{
+    background-color: #f3b512 !important;
+}
+
+.fHoverYellow:hover{
+    color: #f3b512 !important;
+}
+
+.bHoverYellow:hover{
+    background-color: #f3b512 !important;
+    border-color: #f3b512 !important;
+}
 
 /*CART ITEMS*/
 .cartItem{
