@@ -7,7 +7,7 @@ $(document).ready(function() {
 			console.log(status);
 			var categories = data.map(value => value.category).filter((item, pos, self) => self.indexOf(item) == pos);
 			for (var i = 0; i < categories.length; i++) {
-				$("#horoscope-categories").append(`<li><a data-horoscope="`+parseInt(i+1)+`">`+categories[i]+`</a></li>`);
+				$("#horoscope-categories").append(`<li><a class="horoscope-category" data-horoscope="`+parseInt(i+1)+`">`+categories[i]+`</a></li>`);
 				$("#horoscope-categories li:first").addClass("active");
 			}
 			let details = data.filter(value => value.category === categories[0]);

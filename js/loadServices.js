@@ -33,7 +33,7 @@ $(document).ready(function() {
 							                        			<div class="col-md-12">    
 							                                <div class="sign_card text-center signs_bg">
 							                                    <span id="service-name" class="text-aries signs_clr font16">`+data[i].name+`</span><br>
-							                                    <span class="signtext_clr font12">Collection of Poojas</span>
+							                                    <span class="signtext_clr font12"></span>
 							                                </div>
 							                        			</div>
 						                        		</div>

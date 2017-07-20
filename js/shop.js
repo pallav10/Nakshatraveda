@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 	// If shop is accessed through home page services
 	
 	if(sessionStorage.getItem("sp_id") != 0) {
@@ -40,7 +39,9 @@ $(document).ready(function() {
 																				 		<div class="row">
 																				 			<div class="col-md-4 col-sm-6 col-xs-6"><p data-price="`+data[i].price+`" class="item-price">INR `+data[i].price+`/- </p></div>
 																						 	<div class="col-md-4 col-sm-6 col-xs-6"><button data-price="`+data[i].price+`" id="buy-item" data-id="`+data[i].id+`" class="btn btn-default buy-items">Add to Cart</button></div>
-																						 	<div class="col-md-4 col-sm-12 col-xs-12"><p class="text-center" id="login-to-buy"></p></div>	
+																						 	<div class="col-md-4 col-sm-12 col-xs-12" id="user-message">
+																						 		<p class="text-center" id="login-to-buy"></p>
+																						 	</div>	
 																				 		</div>
 																				 	</div>
 																				 </div>
@@ -86,7 +87,8 @@ $(document).ready(function() {
 				type: "GET",
 				url: "https://nksv-beta.herokuapp.com/api/categories/"+x+"/items/",
 				success: function(data, status) {
-					console.log(data);
+					var count = data.length;
+					$("#load-more-btn").attr("data-count",count);
 					for(i = 0; i < 5; i++) {
 						$("#load-details").append(`<div class="div-count">
 																				 <h3>`+data[i].name+`</h3>
@@ -99,7 +101,9 @@ $(document).ready(function() {
 																				 		<div class="row">
 																				 			<div class="col-md-4 col-sm-6 col-xs-6"><p data-price="`+data[i].price+`" class="item-price">INR `+data[i].price+`/- </p></div>
 																						 	<div class="col-md-4 col-sm-6 col-xs-6"><button data-price="`+data[i].price+`" id="buy-item" data-id="`+data[i].id+`" class="btn btn-default buy-items">Add to Cart</button></div>
-																						 	<div class="col-md-4 col-sm-12 col-xs-12"><p class="text-center" id="login-to-buy"></p></div>	
+																						 	<div class="col-md-4 col-sm-12 col-xs-12"  id="user-message">
+																						 		<p class="text-center" id="login-to-buy"></p>
+																						 	</div>
 																				 		</div>
 																				 	</div>
 																				 </div>
@@ -144,7 +148,10 @@ $(document).ready(function() {
 																		     	<div class="row">
 																			 			<div class="col-md-4 col-sm-6 col-xs-6"><p class="item-price">INR `+data[i].price+`/- </p></div>
 																					 	<div class="col-md-4 col-sm-6 col-xs-6"><button data-price="`+data[i].price+`" id="buy-item" data-id="`+data[i].id+`" class="btn btn-default buy-items">Add to Cart</button></div>
-																					 	<div class="col-md-4 col-sm-12 col-xs-12"><p class="text-center" id="login-to-buy"></p></div>	
+																					 	<div class="col-md-4 col-sm-12 col-xs-12" id="user-message">
+																						 		<p class="text-center" id="login-to-buy"></p>
+																						 		<p class="text-center"></p>
+																						 	</div>
 																			 		</div>
 																		     </div>
 																		   </div>
@@ -173,7 +180,7 @@ $(document).ready(function() {
 		    dataType: "json",
 		    success: function(data,status) {
 		    	console.log(data);
-		    	console.log(status);
+		    	console.log(status);		  		
 		    },
 		    error: function(data,status) {
 		    	console.log(data);
@@ -195,7 +202,6 @@ $(document).ready(function() {
 			var divs = $('.div-count:visible').length;
 			console.log(divs);
 			var activeId = $(".active:visible").children().data("id");
-			console.log(activeId);
 			$.ajax({
 				type: "GET",
 				url: "https://nksv-beta.herokuapp.com/api/categories/"+activeId+"/items",
@@ -216,7 +222,9 @@ $(document).ready(function() {
 																				     	<div class="row">
 																					 			<div class="col-md-4 col-sm-6 col-xs-6"><p class="item-price">INR `+data[i].price+`/- </p></div>
 																							 	<div class="col-md-4 col-sm-6 col-xs-6"><button data-price="`+data[i].price+`" id="buy-item" data-id="`+data[i].id+`" class="btn btn-default buy-items">Add to Cart</button></div>
-																							 	<div class="col-md-4 col-sm-12 col-xs-12"><p class="text-center" id="login-to-buy"></p></div>	
+																							 	<div class="col-md-4 col-sm-12 col-xs-12" id="user-message">
+																						 		<p class="text-center" id="login-to-buy"></p>
+																						 	</div>
 																					 		</div>
 																				     </div>
 																				   </div>
@@ -228,10 +236,9 @@ $(document).ready(function() {
 		    	console.log(status);
 		    }		
 			});
-		});
-
-		$(window).resize(function() {
-			if(window.innerWidth < 992)
-		  $( "#load-details" ).removeClass("border-left");
+			var index = $("#load-more-btn").data("count");
+			if(index == divs) {
+				$("#load-more-btn").hide();
+			}
 		});
 });
