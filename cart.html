@@ -49,17 +49,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-xs-12 tpbanner_align headHead">
-                    <div class="header_border hidden-xs font12">Language:
-                        <ul>
-                            <li class="dropdown lang_dropdown">
-                                <a href="index.html" data-toggle="dropdown" class="dropdown-toggle">EN <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="index.html">Hindi</a></li>
-                                    <li><a href="index.html">English</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                    <div id="google_translate_element"></div>
                     <div class="clearfix visible-xs-block"></div>
                     <span class="header_border header_text hidden-xs font12">Follow Us</span>
                     <span class="head_icons"><a target="_blank" href="https://www.facebook.com/nakshatraveda"><i class="fa fa-facebook-square header_icons fa-lg"></i></a>
@@ -291,6 +281,11 @@
 <script src="vendors/sweetalert2/js/sweetalert2.min.js"></script>
 <script src="vendors/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
 <script src="vendors/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'hi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <!--=============== Custom Js Start ===============-->
 <script src="js/custom.js"></script>
 <script src="js/checkUser.js"></script>

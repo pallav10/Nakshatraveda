@@ -49,16 +49,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-xs-12 tpbanner_align headHead">
-                    <div class="header_border hidden-xs font12">Language:
-                        <ul>
-                            <li class="dropdown lang_dropdown">
-                                <a href="index.html" data-toggle="dropdown" class="dropdown-toggle">EN <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="index.html">Hindi</a></li>
-                                    <li><a href="index.html">English</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <div class="header_border hidden-xs font12">
+                        <div id="google_translate_element"></div>    
                     </div>
                     <div class="clearfix visible-xs-block"></div>
                     <span class="header_border header_text hidden-xs font12">Follow Us</span>
@@ -217,8 +209,8 @@
                     <li><a href="horoscopes.html">Horoscope</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
-
             </div>
+            
             <div class="clearfix visible-sm-block"></div>
             <div class="col-md-4 col-sm-4 col-xs-12 m-t-40 text-left">
                 <h5>Other Services</h5>
@@ -253,6 +245,11 @@
 <script src="vendors/sweetalert2/js/sweetalert2.min.js"></script>
 <script src="vendors/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
 <script src="vendors/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'hi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <!--=============== Custom Js Start ===============-->
 <script src="js/custom.js"></script>
 <script src="js/checkUser.js"></script>

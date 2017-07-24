@@ -28,22 +28,29 @@ $(document).ready(function() {
 				success: function(data, status) {
 					console.log(data);
 					for(i = 0; i < 5; i++) {
-						$("#load-details").append(`<div class="div-count">
+						$("#load-details").prepend(`<div class="div-count">
 																				 <h3>`+data[i].name+`</h3>
 																				 <div class='row'>
 																				 	<div class='col-md-6 col-sm-12 col-xs-12'>
 																				 		<img src="../images/items/`+data[i].id+`.png">
 																				 	</div>
 																				 	<div class='col-md-6 col-sm-12 col-xs-12'>
-																				 		<p>`+data[i].description+`</p>
-																				 		<button id="load-desc" class="btn btn-default">Read More</button>
+																				 		<p>`+data[i].description.substring(0,297)+`.....  <a href="#myModal" id="open-modal">Read more</a></p>
+																				 		<div id="myModal" class="modal">
+																						  <!-- Modal content -->
+																						  <div class="modal-content">
+																						    <span class="close">&times;</span>
+																						    <h4>`+data[i].name+`</h4>
+																						    <p>`+data[i].description+`</p>
+																						  </div>
+																						</div>
 																				 		<div class="row">
 																				 			<div class="col-md-4 col-sm-6 col-xs-6"><p data-price="`+data[i].price+`" class="item-price">INR `+data[i].price+`/- </p></div>
 																						 	<div class="col-md-4 col-sm-6 col-xs-6"><button data-price="`+data[i].price+`" id="buy-item" data-id="`+data[i].id+`" class="btn btn-default buy-items">Add to Cart</button></div>
 																						 	<div class="col-md-4 col-sm-12 col-xs-12" id="user-message">
 																						 		<p class="text-center" id="login-to-buy"></p>
 																						 	</div>	
-																				 		</div>
+																				 		</div>	
 																				 	</div>
 																				 </div>
 																			 </div>`);
@@ -91,15 +98,22 @@ $(document).ready(function() {
 					var count = data.length;
 					$("#load-more-btn").attr("data-count",count);
 					for(i = 0; i < 5; i++) {
-						$("#load-details").append(`<div class="div-count">
+						$("#load-details").prepend(`<div class="div-count">
 																				 <h3>`+data[i].name+`</h3>
 																				 <div class='row'>
 																				 	<div class='col-md-6 col-xs-12'>
 																				 		<img src="../images/items/`+data[i].id+`.png">
 																				 	</div>
 																				 	<div class='col-md-6 col-xs-12'>
-																				 		<p>`+data[i].description+`</p>
-																				 		<button id="load-desc" class="btn btn-default">Read More</button>
+																				 		<p>`+data[i].description.substring(0,297)+`.....  <a href="#myModal" id="open-modal">Read more</a></p>
+																				 		<div id="myModal" class="modal">
+																						  <!-- Modal content -->
+																						  <div class="modal-content">
+																						    <span class="close">&times;</span>
+																						    <h4>`+data[i].name+`</h4>
+																						    <p>`+data[i].description+`</p>
+																						  </div>
+																						</div>
 																				 		<div class="row">
 																				 			<div class="col-md-4 col-sm-6 col-xs-6"><p data-price="`+data[i].price+`" class="item-price">INR `+data[i].price+`/- </p></div>
 																						 	<div class="col-md-4 col-sm-6 col-xs-6"><button data-price="`+data[i].price+`" id="buy-item" data-id="`+data[i].id+`" class="btn btn-default buy-items">Add to Cart</button></div>
@@ -139,15 +153,22 @@ $(document).ready(function() {
 				console.log(status);
 				$("#load-details").empty();
 				for(i = 0;i < 5; i++) {
-					$("#load-details").append(`<div class="div-count">
+					$("#load-details").prepend(`<div class="div-count">
 																		   <h3>`+data[i].name+`</h3>
 																		   <div class='row'>
 																		     <div class='col-md-6 col-xs-12'>
 																		     	<img src="../images/items/`+data[i].id+`.png">
 																		     </div>
 																		     <div class='col-md-6 col-xs-12'>
-																		     	<p>`+data[i].description+`</p>
-																		     	<button id="load-desc" class="btn btn-default">Read More</button>
+																		     	<p>`+data[i].description.substring(0,297)+`.....  <a href="#myModal" id="open-modal">Read more</a></p>
+																		     	<div id="myModal" class="modal">
+																						  <!-- Modal content -->
+																						  <div class="modal-content">
+																						    <span class="close">&times;</span>
+																						    <h4>`+data[i].name+`</h4>
+																						    <p>`+data[i].description+`</p>
+																						  </div>
+																						</div>
 																		     	<div class="row">
 																			 			<div class="col-md-4 col-sm-6 col-xs-6"><p class="item-price">INR `+data[i].price+`/- </p></div>
 																					 	<div class="col-md-4 col-sm-6 col-xs-6"><button data-price="`+data[i].price+`" id="buy-item" data-id="`+data[i].id+`" class="btn btn-default buy-items">Add to Cart</button></div>
@@ -214,15 +235,22 @@ $(document).ready(function() {
 		    	console.log(data);
 		    	console.log(status);
 					for (i = divs; i < divs + 5; i++) {
-						$("#load-details").append(`<div class="div-count">
+						$("#load-details").prepend(`<div class="div-count">
 																				   <h3>`+data[i].name+`</h3>
 																				   <div class='row'>
 																				     <div class='col-md-6 col-xs-12'>
 																				     	<img src="../images/items/`+data[i].id+`.png">
 																				     </div>
 																				     <div class='col-md-6 col-xs-12'>
-																				     	<p>`+data[i].description+`</p>
-																				     	<button id="load-desc" class="btn btn-default">Read More</button>
+																				     	<p>`+data[i].description.substring(0,297)+`.....  <a href="#myModal" id="open-modal">Read more</a></p>
+																				     	<div id="myModal" class="modal">
+																						  <!-- Modal content -->
+																						  <div class="modal-content">
+																						    <span class="close">&times;</span>
+																						    <h4>`+data[i].name+`</h4>
+																						    <p>`+data[i].description+`</p>
+																						  </div>
+																						 </div>
 																				     	<div class="row">
 																					 			<div class="col-md-4 col-sm-6 col-xs-6"><p class="item-price">INR `+data[i].price+`/- </p></div>
 																							 	<div class="col-md-4 col-sm-6 col-xs-6"><button data-price="`+data[i].price+`" id="buy-item" data-id="`+data[i].id+`" class="btn btn-default buy-items">Add to Cart</button></div>
@@ -245,4 +273,18 @@ $(document).ready(function() {
 				$("#load-more-btn").hide();
 			}
 		});
+
+	$("#load-details").on("click", "#open-modal", function() {
+		var modal = $(this).closest(".row").children().find(".modal");
+		modal.css("display", "block");
+		modal.children().find(".close").click(function() {
+			modal.css("display", "none");
+		});
+		$(window).click(function(e) {
+			if (e.target === modal[0]) {
+        modal.css("display", "none");
+    	}
+		});
+	});
+
 });
